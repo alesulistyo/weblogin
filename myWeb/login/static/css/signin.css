@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Yeseva+One&display=swap");
+
+:root {
+	--primary: #0d0d0d;
+	--secondary: #191919;
+	--tertiary: #2a2a2a;
+	--accent: #d1b280;
+
+	--text-white: #f6f6f6;
+	--text-black: #0d0d0d;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Josefin Sans";
+
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--tertiary);
+
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.navbar {
+	height: 64px;
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.navbar a {
+	display: flex;
+	color: var(--text-white);
+	align-items: center;
+	text-decoration: none;
+	padding: 32px 32px;
+	font-size: 20px;
+}
+
+.navbar a:hover {
+	color: var(--accent);
+}
+
+.navbar span {
+	display: flex;
+	color: var(--text-white);
+	align-items: center;
+	font-size: 36px;
+
+	text-transform: uppercase;
+	animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+	from {
+		text-shadow: 0 0 0px;
+	}
+	to {
+		text-shadow: 0 0 30px var(--accent), 0 0 10px goldenrod;
+	}
+}
+
+.container {
+	height: calc(100vh - 64px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	width: 512px;
+	height: 578px;
+	background-color: var(--secondary);
+	border-radius: 25px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+form {
+	width: 75%;
+}
+
+.form h2 {
+	width: 100%;
+	color: var(--text-white);
+	margin: 8px 0;
+}
+
+.form input {
+	width: 100%;
+	height: 32px;
+	border: 2px solid var(--text-white);
+	border-radius: 4px;
+	margin: 8px 0;
+	padding: 8px;
+	box-sizing: border-box;
+	outline: none;
+	transition: 0.3s;
+}
+
+.form input:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 5px 0 var(--accent);
+}
+
+.form button {
+	border: none;
+	width: 100%;
+
+	margin: 8px 0;
+	padding: 8px;
+	color: #ecf0f1;
+	border-radius: 8px;
+	background-color: var(--accent);
+	height: 32px;
+
+	transition: 0.3s;
+}
+
+.form button:hover {
+	background-color: #a88d60;
+}
+
+.form div {
+	width: 100%;
+	color: #6d6d6d;
+	margin: 8px 0;
+}
+
+.form div span a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+.warning {
+	display: flex;
+	width: 100%;
+	margin: 8px 0;
+}
