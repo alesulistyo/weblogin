@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.db import connection
 from django.shortcuts import render, redirect
 
@@ -16,8 +17,15 @@ def index(request):
         cursor.close()
         return redirect("/")
 
+    logout(request)
+
     context = {
         "title": "CHRONICLE",
         "username": username,
     }
     return render(request, "welcome.html", context)
+
+
+def userlogout(request):
+    logout(request)
+    return redirect("/")
